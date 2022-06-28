@@ -4,13 +4,29 @@
       "symbol": "WBA",
       "minvalue": "20",
       "maxvalue": "200",
-      "id": 1656444811301
+      "id": 1656444811301,
+      "price": "40.9600"
     },
     {
       "symbol": "DIS",
-      "minvalue": "100",
+      "minvalue": "80",
       "maxvalue": "300",
-      "id": 1656444821878
+      "id": 1656444821878,
+      "price": "95.9200"
+    },
+    {
+      "symbol": "AMZN",
+      "minvalue": "10",
+      "maxvalue": "100",
+      "id": 1656451695385,
+      "price": "107.4000"
+    },
+    {
+      "symbol": "BA",
+      "minvalue": "200",
+      "maxvalue": "200",
+      "id": 1656455786517,
+      "price": "138.7000"
     }
   ]
 }

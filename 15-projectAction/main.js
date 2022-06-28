@@ -1,4 +1,4 @@
-const { app, BrowserWindow, ipcMain } = require('electron')
+const { app, BrowserWindow, ipcMain, Menu } = require('electron')
 const path = require('path')
 
 const createWindow = () => {
@@ -15,9 +15,43 @@ const createWindow = () => {
   mainWindow.loadFile('src/index.html')
   //mainWindow.webContents.openDevTools()
 
+  const template= [
+    {
+      label: "Menu",
+      submenu: [
+        {
+          label: "Notifikation", 
+          click() {
+            openWin2("Notifikation")
+          }
+        },
+        {
+          label: "Refresh",
+          click() {
+            mainWindow.webContents.send('refresh')
+          }
+        },
+        {
+          type: "separator"
+        },
+        {
+          role: "quit",
+          label: "Ende"
+        }
+      ]
+    }
+  ]
+
+  const menu=Menu.buildFromTemplate(template)
+  Menu.setApplicationMenu(menu)
 }
 
 ipcMain.on('window', function(event,arg) {
+  openWin2(arg)
+})
+
+
+function openWin2(arg) {
   const win2=new BrowserWindow({width: 600, height: 500,
     webPreferences: {
       //preload: path.join(__dirname, 'preload.js'),
@@ -28,7 +62,7 @@ ipcMain.on('window', function(event,arg) {
   win2.loadFile('src/notify.html')
   win2.removeMenu()
   win2.title=arg
-})
+}
 
 app.whenReady().then(() => {
   createWindow()
@@ -42,3 +76,4 @@ app.whenReady().then(() => {
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') app.quit()
 })
+
