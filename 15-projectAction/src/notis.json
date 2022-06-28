@@ -1,0 +1,16 @@
+{
+  "notis": [
+    {
+      "symbol": "WBA",
+      "minvalue": "20",
+      "maxvalue": "200",
+      "id": 1656444811301
+    },
+    {
+      "symbol": "DIS",
+      "minvalue": "100",
+      "maxvalue": "300",
+      "id": 1656444821878
+    }
+  ]
+}

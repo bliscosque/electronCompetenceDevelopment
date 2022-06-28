@@ -38,6 +38,3 @@ function showData(symbol) {
     })
 }
 
-function notify(symbol) {
-    alert(symbol)
-}

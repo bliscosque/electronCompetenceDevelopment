@@ -4,7 +4,7 @@ const dir=path.join(__dirname,'')
 
 //createDB()
 //inputDB()
-searchDB()
+//searchDB()
 
 //creating DB
 function createDB() {
@@ -54,6 +54,7 @@ function searchDB(term) {
             }
 
             document.getElementById("container").appendChild(table)
+            dbCount()
         }
     })
 }
