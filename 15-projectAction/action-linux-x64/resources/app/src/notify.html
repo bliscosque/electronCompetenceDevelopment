@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../node_modules/bulma/css/bulma.css">
+</head>
+<body>
+    <input class="input" id="stocksymbol" type="text" placeholder="Symbol">
+    <input class="input" id="minvalue" type="number" placeholder="Min">
+    <input class="input" id="maxvalue" type="number" placeholder="Max">
+    <button class="button is-primary" onclick="inputNoti()">Salvar</button>
+    <button class="button is-primary" onclick="searchNoti()">Notificacoes</button>
+    <div class="content">
+        <div id="liste"></div>
+    </div>
+
+    <script src="index.js"></script>
+    <script src="chart.js"></script>
+    <script src="notification.js"></script>
+</body>
+</html>
