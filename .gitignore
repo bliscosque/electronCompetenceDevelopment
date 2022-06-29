@@ -103,5 +103,5 @@ dist
 # TernJS port file
 .tern-port
 
-action-win32-x64
-action-linux-x64
+action-win32-x64/
+action-linux-x64/
