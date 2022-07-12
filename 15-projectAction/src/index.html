@@ -27,7 +27,7 @@
             </div>
             <div class="tile is-parent">
                 <article class="tile is-child box">
-                    <p class="title">0</p>
+                    <p class="title" id="noticount">0</p>
                     <p class="subtitle">Notification</p>
                 </article>
             </div>
@@ -46,10 +46,6 @@
                                     <th>Chart</th>
                                 </tr>
                             </thead>
-                            <tbody>
-
-
-                            </tbody>
                             <div id="container"></div>
                         </table>
                     </div>
@@ -60,12 +56,16 @@
         <div class="column is-6">
             <div class="card-table">
                 <div class="content">
-                    <label>Chart</label>
+                    <label id="chart">Chart</label>
+                    <canvas id="myChart" width="300" height="200"></canvas>
                 </div>
             </div>
         </div>
     </div>
+    <div class="notification is-warning" id="bulmaNoti" style="display:none"></div>
 
     <script src="index.js"></script>
+    <script src="chart.js"></script>
+    <script src="notification.js"></script>
 </body>
 </html>

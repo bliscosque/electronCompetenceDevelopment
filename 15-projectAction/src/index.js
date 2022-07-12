@@ -4,7 +4,7 @@ const dir=path.join(__dirname,'')
 
 //createDB()
 //inputDB()
-searchDB()
+//searchDB()
 
 //creating DB
 function createDB() {
@@ -46,8 +46,7 @@ function searchDB(term) {
                 let cell2=row.insertCell()
                 cell2.innerHTML=data[i].name
                 let cell3=row.insertCell()
-                cell3.innerHTML=('<a class="button is-small is-primary" href="">Chart</a>')
-
+                cell3.innerHTML = ('<a class="button is-small is-primary" onclick="showData(\'' + data[i].symbol + '\')">Chart</a>')
                 let next=i+1
                 if(next!=data.length) {
                     row=table.insertRow()
@@ -55,6 +54,7 @@ function searchDB(term) {
             }
 
             document.getElementById("container").appendChild(table)
+            dbCount()
         }
     })
 }
