@@ -1,5 +1,8 @@
 const fs = require('fs')
 const {shell}=require('electron')
+const path = require('path')
+
+require ('dotenv').config({path: path.resolve(__dirname, '..','.env')})
 let obsidian_path=process.env.OBSIDIAN_PATH;
 const fName=obsidian_path+"/links.md"
 

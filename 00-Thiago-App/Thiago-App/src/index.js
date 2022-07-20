@@ -1,5 +1,7 @@
 const { app, BrowserWindow } = require('electron');
 const path = require('path');
+require ('dotenv').config({path: path.resolve(__dirname, '..','.env')})
+console.log(process.env.OBSIDIAN_PATH)
 
 
 if (require('electron-squirrel-startup')) {
