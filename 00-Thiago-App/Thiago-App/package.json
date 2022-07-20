@@ -45,8 +45,13 @@
     }
   },
   "dependencies": {
+<<<<<<< HEAD
     "dotenv": "^16.0.1",
     "electron-squirrel-startup": "^1.0.0"
+=======
+    "electron-squirrel-startup": "^1.0.0",
+    "papaparse": "^5.3.2"
+>>>>>>> 41c906c7ea33f22fc44e1aec30fb8736434e63a5
   },
   "devDependencies": {
     "@electron-forge/cli": "^6.0.0-beta.64",
